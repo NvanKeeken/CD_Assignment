@@ -11,5 +11,4 @@ jobs:
           host: 167.71.37.91
           username: MyWincVps
           password: ${{ secrets.SECRET_PASSWORD }}
-          key: ${{ secrets.PRIVATE_DEPLOY_KEY }}
           script: echo hello world > hello.txt
