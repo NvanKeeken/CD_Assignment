@@ -1,0 +1,14 @@
+name: Access server
+on: push
+jobs:
+  access_server:
+    name: Access server
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create a file
+        uses: appleboy/ssh-action@master
+        with:
+          host: 167.71.37.91
+          username: MyWincVps
+          key: ${{ secrets.PRIVATE_DEPLOY_KEY }}
+          script: echo hello world > hello.txt
