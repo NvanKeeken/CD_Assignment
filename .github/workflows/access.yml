@@ -8,7 +8,7 @@ jobs:
       - name: Create a file
         uses: appleboy/ssh-action@master
         with:
-          host: 167.71.37.91
-          username: MyWincVps
-          password: ${{ secrets.SECRET_PASSWORD }}
+          host: ${{secrets.SECRET_HOST}}
+          username: ${{secrets.SECRET_USERNAME}}
+          key: ${{secrets.PRIVATE_DEPLOY_KEY}}
           script: echo hello world > hello.txt
