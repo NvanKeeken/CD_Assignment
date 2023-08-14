@@ -5,6 +5,6 @@ def test_index():
     assert index() == "Welcome, to my final winc assignment: CD!"
 
 def test_requirments():
-    assert requirements() == "The requirments are: build a continuous deployment using Git Actions"
+    assert requirements() == "The requirments are: build a continuous deployment using Git Action"
 
 
