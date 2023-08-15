@@ -13,7 +13,7 @@ jobs:
         with:
           host: ${{ secrets.SECRET_HOST }}
           username: ${{ secrets.SECRET_USERNAME }}
-          key: ${{ secrets.SECRET_KEY }}
+          key: ${{ secrets.SECRET_DEPLOY }}
           script: |
                   cd /home/
                   echo hello world > hello.txt
