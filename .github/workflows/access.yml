@@ -11,7 +11,7 @@ jobs:
       - name: create file
         uses: appleboy/ssh-action@master
         with:
-          host: 167.71.37.91
+          host: ${{ secrets.SECRET_HOST }}
           username: ${{ secrets.SECRET_USERNAME }}
           key: ${{ secrets.SECRET_DEPLOY }}
           script: |
