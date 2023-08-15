@@ -11,8 +11,8 @@ jobs:
       - name: create file
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USERNAME }}
+          host: ${{ secrets.SECRET_HOST }}
+          username: ${{ secrets.SECRET_USERNAME }}
           key: ${{ secrets.SECRET_KEY }}
           script: |
                   cd /home/
