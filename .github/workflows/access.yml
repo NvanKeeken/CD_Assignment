@@ -9,7 +9,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: create file
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.SECRET_HOST }}
           username: ${{ secrets.SECRET_USERNAME }}
