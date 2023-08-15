@@ -3,7 +3,7 @@ on: push
 jobs:
   access_server:
     name: Access server
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Create a file
         uses: appleboy/ssh-action@v0.1.4
