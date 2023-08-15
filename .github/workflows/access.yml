@@ -16,4 +16,6 @@ jobs:
           key: ${{ secrets.SECRET_DEPLOY }}
           script: |
                   cd /home/
-                  echo hello world > hello.txt
+                  git pull origin main
+                  systemctl restart my-application
+                  systemctl status my-application
