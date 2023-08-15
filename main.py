@@ -11,5 +11,5 @@ def index():
 
 @app.route('/requirements')
 def requirements():
-    return 'The requirments are: build a continuous deployment using Git Action'
+    return 'The requirments are: build a continuous deployment using Git Actions'
 
