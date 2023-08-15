@@ -12,7 +12,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: 167.71.37.91
-          username: ${{ secrets.SECRET_USERNAME }}
+          username: MyWincVps
           key: ${{ secrets.SECRET_DEPLOY }}
           script: |
                   cd /home/
