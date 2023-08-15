@@ -15,5 +15,6 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SECRET_KEY }}
           script: |
+                  cd /home/
                   echo hello world > hello.txt
 
