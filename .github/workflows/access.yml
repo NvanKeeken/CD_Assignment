@@ -10,5 +10,5 @@ jobs:
         with:
           host: ${{secrets.SECRET_HOST}}
           username: ${{secrets.SECRET_USERNAME}}
-          password: ${{secrets.SECRET_PASSWORD}}
+          key: ${{secrets.PRIVATE_DEPLOY_KEY}}
           script: echo hello world > hello.txt
