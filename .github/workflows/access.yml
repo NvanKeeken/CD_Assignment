@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: deploy flask app
+      - name: create file
         uses: actions/checkout@v2
         with:
           host: ${{ secrets.SERVER_HOST }}
