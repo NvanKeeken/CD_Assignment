@@ -1,15 +1,19 @@
-name: Access server
-on: push
+name: build and deploy
+on:
+  push:
+    branches: [main]
 jobs:
-  access_server:
-    name: Access server
+  deploy:
+    # The type of runner that the job will run on
     runs-on: ubuntu-latest
     steps:
-      — name: Create a file
-        uses: appleboy/ssh-action@master
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: create file
+        uses: appleboy/ssh-action@v0.1.2
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.PRIVATE_KEY }}
-          script: echo hello world > hello.txt
-
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          key: ${{ secrets.SECRET_KEY }}
+          script: |
+                  cd /home/
+                  echo hello world > hello.txt
