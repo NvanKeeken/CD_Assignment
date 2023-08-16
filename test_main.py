@@ -2,7 +2,7 @@
 from main import index, requirements
 
 def test_index():
-    assert index() == "Welcome, to my final winc assignment: CD!Work"
+    assert index() == "Welcome, to my final winc assignment: CD! I hope it works!"
 
 def test_requirments():
     assert requirements() == "The requirments are: build a continuous deployment using Git Actions"
