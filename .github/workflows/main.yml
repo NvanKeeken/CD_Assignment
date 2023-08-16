@@ -1,0 +1,35 @@
+name: Continous Deployment and run tests
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.11.0'
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+      - name: Run tests
+        run: pytest     
+  deploy:
+    needs: run-tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: create file
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SECRET_HOST }}
+          username: ${{ secrets.SECRET_USERNAME }}
+          key: ${{ secrets.SECRET_DEPLOY }}
+          script: |
+                  cd /home/CD_Assignment
+                  git pull origin main
+                  systemctl restart CD_Assignment
+                  systemctl status CD_Assignment
