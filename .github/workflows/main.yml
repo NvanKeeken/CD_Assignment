@@ -28,4 +28,6 @@ jobs:
           host: ${{ secrets.SECRET_HOST }}
           username: ${{ secrets.SECRET_USERNAME }}
           key: ${{ secrets.SECRET_DEPLOY }}
-          script: bash pull.sh
+          script: |
+                  cd /home/CD_Assignment
+                  bash pull.sh
