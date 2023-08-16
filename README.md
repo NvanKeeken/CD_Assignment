@@ -10,5 +10,5 @@ Assignment CD Winc Back-end Development course
   changes I made before also somehow contributed.
 
   - systemcln restart error:
-  - running .sh file:
+  - running .sh file: h
     
