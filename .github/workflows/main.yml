@@ -22,7 +22,7 @@ jobs:
     needs: run-tests
     runs-on: ubuntu-latest
     steps:
-      - name: create file
+      - name: login to vps and update code 
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SECRET_HOST }}
