@@ -1,14 +1,10 @@
 # CD_Assignment
 Assignment CD Winc Back-end Development course
 
- 3 Problems I encountered:
- -Login ssh key: 
-  The first problem I encountered was this error "ssh: handshake failed: ssh: unable to authenticate, attempted methods [none publickey], no supported methods remain"
-  that I got everytime I tried to deploy my project. It took quite some time too solve this. I tried to solve it by making new ssh keypair and rewriting the yml file 
-  over and over again with little adjustments. I also renewed my github secrets multiple times. Eventually I discouvered that I used the wrong username. I thought 
-  that my username was the hostname of my VPS, but after some online research I found the wright one to use. After this discouvery it workt. But I think that the 
-  changes I made before also somehow contributed.
+## Drie problemen die ik ben tegengekomen :
+ - Error bij het inloggen met de ssh key: Nadat ik mijn eerste deploy workflow had aangemaakt kreeg ik telkens de error "ssh: handshake failed: ssh: unable to authenticate, attempted methods [none publickey], no supported methods remain", wanneer ik contact probeerde te leggen met de mijn VPS. Ik heb dit eerst proberen op te lossen door kleine aanpassingen aan mijn yml file te doen. Toen dit niet werkte heb ik een nieuwe ssh keypair aangemaakt, waarmee het in ieder geval lukte om via de terminal in te loggen in mijn VPS. Uiteindelijk kwam ik tot de ontdekking dat ik de verkeerde username gebruikte. Ik dacht dat de hostname van mijn VPS moest zijn, maar na wat zoekwerk op het internet vond ik waar ik de juiste username kon vinden. Na deze aanpassing was mijn deploy workflow succesvol. 
 
-  - systemcln restart error:
-  - running .sh file: hi
+  - systemcln restart error: Nadat ik mijn workflow een aantal keer sucssesvol had afgerond, kreeg ik opeens de error "Job failed because the control process exited with error code." Wanneer ik de command " systemctl restart CD_Assignment " in mijn terminal gaf kreeg ik ook deze error. Uiteindelijk heb ik de command "systemctl stop CD_Assignment" en ben ik de stappen van de exercise Deployment opnieuw doorlopen, maar ook toen kreeg ik deze error bij de command " systemctl enable --now CD_Assignment  ". Toen heb ik besloten de repository van mijn VPS te verwijderen en het vervolgens met git clone weer op te zetten. Hierna werkte de workflow weer.
+     
+  - running .sh file: In de opdracht beschrijving stond dat het werd aangeraden bash comamnds aan elkaar te koppeln in een .sh file. De .sh file kreeg ik makkelijk geschreven. Ik kreeg het alleen niet voor elkaar de .sh file uit te laten voeren door de workflow. Op youtube heb ik gekeken naar een video waarin hij dit voor elkaar kreeg met "sh ./pull.sh " dit werkte bij mij echter niet. Uiteindelijk heb ik het met een omweg voor elkaar gekregen door bij schript in yml file eerste naar de /home/CD_Assignement te gaan en daar het bestand uit te voeren door "bash pull.sh". Ik weet dat dit niet de beste oplossing is, omdat ik alnog meerder commands in yml file zelf moet schrijven doormiddel van het | symbool, maar op een andere manier lukte het niet. 
     
