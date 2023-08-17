@@ -1,6 +1,10 @@
 # CD_Assignment
 Assignment CD Winc Back-end Development course
 
+## Drie componenten van mijn CD Assignment:
+- Digital Ocean Droplet: Dit is de VPS waar ik in deze opdracht gebruik van maak.
+- Github Actions: In mijn workflow het ik gebruim gemaakt van appleboy/ssh@master. Dit is een een hulpmiddel waarmee je op afstand ssh commands kunt uit voeren. Ik heb hier gebruik van gemaakt om via mijn workflow in github actions in te loggen op mijn VPS op digital ocean, om daar de commands uit te voeren om de code up to date te houden met mijn github repository. Hierdoor kan de workflow op de VPS eerst een pull request doen en vervolgens het systeem herstarten, zodat de aanpassingen ook zichtaar worden in de browser. 
+
 ## Drie problemen die ik ben tegengekomen :
  - Error bij het inloggen met de ssh key: Nadat ik mijn eerste deploy workflow had aangemaakt kreeg ik telkens de error "ssh: handshake failed: ssh: unable to authenticate, attempted methods [none publickey], no supported methods remain", wanneer ik contact probeerde te leggen met de mijn VPS. Ik heb dit eerst proberen op te lossen door kleine aanpassingen aan mijn yml file te doen. Toen dit niet werkte heb ik een nieuwe ssh keypair aangemaakt, waarmee het in ieder geval lukte om via de terminal in te loggen in mijn VPS. Uiteindelijk kwam ik tot de ontdekking dat ik de verkeerde username gebruikte. Ik dacht dat de hostname van mijn VPS moest zijn, maar na wat zoekwerk op het internet vond ik waar ik de juiste username kon vinden. Na deze aanpassing was mijn deploy workflow succesvol. 
 
