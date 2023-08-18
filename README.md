@@ -20,6 +20,6 @@ In this Assignment I made a continuous deployment pipeline. I made a simple Flas
         "script: |
                  cd /home/CD_Assignment
                  bash pull.sh"
-    I know this is not the best solution beacause I still need to write multiple commands in the yml itself. Eventually I discovered that I needed to adjust the path of the sh file like " script: sh /home/CD_Assignment/pull.sh" 
+    I knew this was not the best solution because I still needed to write multiple commands in the yml itself. Eventually I discovered that I needed to adjust the path of the sh file like " script: sh /home/CD_Assignment/pull.sh" 
  
     
