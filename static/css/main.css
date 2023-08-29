@@ -1,5 +1,7 @@
 body{
     text-align: center;
+    width: 100%;
+    height: 100%;
     background-image: linear-gradient(pink, rgb(115, 216, 115)) ;
 }
 
