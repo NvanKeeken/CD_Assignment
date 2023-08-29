@@ -1,10 +1,11 @@
 body{
     text-align: center;
-    width: 100%;
-    height: 100%;
+    margin:0 auto;
     background-image: linear-gradient(pink, rgb(115, 216, 115)) ;
     background-repeat: no-repeat;
     background-position: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .nav_menu{
@@ -18,7 +19,18 @@ body{
 .nav_menu a{
     text-decoration: none;
     color:brown;
-    font-size: medium;
+    font-size: 80;
+    font-family: sans-serif;
+}
+.nav_menu a{
+    text-decoration: none;
+    color:brown;
+    font-size: 80;
+    font-family: sans-serif;
+}
+
+.nav_menu a:hover{
+    color:blanchedalmond
 }
 .about_section h2{
     font-weight: 400;
