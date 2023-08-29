@@ -9,9 +9,12 @@ html{
 }
 .nav{
     background: pink;
+    width: 100%;
+    margin:0;
+    border-bottom: palevioletred;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .nav_menu{
     display: flex;
@@ -24,6 +27,7 @@ html{
 .nav_menu a{
     text-decoration: none;
     color:brown;
+    margin-right: 20;
     font-size: 80;
     font-family: sans-serif;
 }
