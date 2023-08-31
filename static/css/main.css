@@ -64,4 +64,7 @@ body{
 .home_section{
     background-color: rgb(167, 167, 216);
     color: aliceblue;
+    border: solid 5px rgb(77, 77, 118) ;
+    width: 40%;
+    height: 20%;
 }
